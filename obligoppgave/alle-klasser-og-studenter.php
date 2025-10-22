@@ -16,11 +16,11 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
   for ($r=1;$r<=$antallRader;$r++)
   {
     $rad=mysqli_fech_array($sqlResultat);
-    $klasseKode=$rad["klassekode"];
-    $klasseNavn=$rad["klassenavn"];
-    $studiumKode=$rad["studiumkode"];
+    $klassekode=$rad["klassekode"];
+    $klassenavn=$rad["klassenavn"];
+    $studiumkode=$rad["studiumkode"];
 
-    print("<tr> <td> $klasseKode </td> <td> $klasseNavn </td> <td> $studiumKode </td> </tr>");
+    print("<tr> <td> $klassekode </td> <td> $klassenavn </td> <td> $studiumkode </td> </tr>");
   }
   print("</table>"); /*tabell slutt */
   ?>
