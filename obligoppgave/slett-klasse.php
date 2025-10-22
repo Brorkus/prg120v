@@ -35,7 +35,7 @@
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
-              print ("Denne klassen er blitt slettet: $klassekode, $klassenavn, $studiumkode  <br />");
+              print ("Klassen med klassekode $klassekode har blitt slettet <br />");
             }
         }
     }
