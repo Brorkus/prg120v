@@ -1,5 +1,5 @@
 <?php
-include("dpconnect.php");
+include("dbconnect.php");
 
 $sqlSetning= "select * from klasse;";
 
