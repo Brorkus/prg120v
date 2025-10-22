@@ -34,7 +34,7 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO klasse VALUES('$klassekode','$klassenavn','$studiumkode);";
+              $sqlSetning="INSERT INTO klasse VALUES('$klassekode','$klassenavn','$studiumkode');";
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
