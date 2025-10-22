@@ -21,7 +21,7 @@
       else
         {
           include("dbconnect.php");  /* tilkobling til database */
-          $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekoce';";
+          $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekoke';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
