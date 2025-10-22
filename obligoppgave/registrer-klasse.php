@@ -30,7 +30,7 @@
 
           if ($antallRader!=0)  /* Klasse er registrert fra før */
             {
-              print ("Klasse er allerede registrert");
+              print ("$klassekode er allerede i bruk");
             }
           else
             {
@@ -38,7 +38,7 @@
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
-              print ("Denne klassen er blitt registrert: $klassekode $klassenavn $studiumkode"); 
+              print ("Denne klassen er blitt registrert: $klassekode, $klassenavn, $studiumkode"); 
             }
         }
     }
