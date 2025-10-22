@@ -5,7 +5,7 @@
 <h3>Slett klasse</h3>
 
 <form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema" onSubmit="return bekreft()">
-  Postnr <input type="text" id="klassekode" name="klassekode" required /> <br/>
+  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" /> 
 </form>
 
