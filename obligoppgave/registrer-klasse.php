@@ -1,4 +1,5 @@
 <?php
+?>
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
@@ -8,7 +9,7 @@
   <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
-
+<?php
  if (isset($_POST ["registrerKlasseKnapp"]))
     {
       $klasseKode=$_POST ["klasseKode"];
