@@ -15,7 +15,7 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
   
   for ($r=1;$r<=$antallRader;$r++)
   {
-    $rad=mysqli_fech_array($sqlResultat);
+    $rad=mysqli_fetch_array($sqlResultat);
     $klassekode=$rad["klassekode"];
     $klassenavn=$rad["klassenavn"];
     $studiumkode=$rad["studiumkode"];
