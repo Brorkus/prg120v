@@ -1,6 +1,9 @@
 <?php
 ?>
+<script src="funksjoner.js"> </script>
+
 <h3>Slett student<h3>
+
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
 Slett student <select name="slettstudent" id="slettstudent">
     <option value="">velg student</option>
@@ -12,7 +15,7 @@ Slett student <select name="slettstudent" id="slettstudent">
 <?php
  if (isset($_POST ["slettStudentKnapp"]))
     {	
-      $brukernavn=$_POST ["brukernavn"];
+      $brukernavn=$_POST ["slettstudent"];
 	  
 	  if (!$brukernavn)
         {
