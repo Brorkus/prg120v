@@ -24,7 +24,7 @@
       $brukernavn=$_POST ["brukernavn"];
       $fornavn=$_POST ["fornavn"];
       $etternavn=$_POST ["etternavn"];
-      $klassekode=$_POST ["klassekode"]
+      $klassekode=$_POST ["klassekode"];
 
       if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode)
         {
