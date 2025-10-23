@@ -9,9 +9,9 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
 
  print ("<h3>Registrerte klasser</h3>");
   print ("<table border=1>");   /*tabell start */
-  print ("<tr><th align=left>klassekode</th> 
-          <th align=left>klassenavn</th>
-          <th align=left>studiumkode</th></tr>"); 
+  print ("<tr><th align=left>Klassekode</th> 
+          <th align=left>Klassenavn</th>
+          <th align=left>Studiumkode</th></tr>"); 
   
   for ($r=1;$r<=$antallRader;$r++)
   {
@@ -33,10 +33,10 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
 
  print ("<h3>Registrerte studenter</h3>");
   print ("<table border=1>");   /*tabell start */
-  print ("<tr><th align=left>brukernavn</th> 
-          <th align=left>fornavn</th>
-          <th align=left>etternavn</th>
-          <th align=left>klassekode</th></tr>"); 
+  print ("<tr><th align=left>Brukernavn</th> 
+          <th align=left>Fornavn</th>
+          <th align=left>Etternavn</th>
+          <th align=left>Klassekode</th></tr>"); 
   
   for ($r=1;$r<=$antallRader;$r++)
   {
