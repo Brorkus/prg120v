@@ -21,33 +21,34 @@
 <?php
  if (isset($_POST ["registrerStudentKnapp"]))
     {
-      $fornavn=$_POST ["brukernavn"];
+      $brukernavn=$_POST ["brukernavn"];
       $fornavn=$_POST ["fornavn"];
       $etternavn=$_POST ["etternavn"];
+      $klassekode=$_POST ["klassekode"]
 
-      if (!$klassekode || !$klassenavn || !$studiumkode)
+      if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode)
         {
-          print ("B&aring;de klassekode, klassenavn og studiumkode m&aring; fylles ut");
+          print ("B&aring;de brukernavn, forenavn, etternavn og klassekode m&aring; fylles ut");
         }
       else
         {
           include("dbconnect.php");  /* tilkobling til database */
 
-          $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekode';";
+          $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader!=0)  /* Klasse er registrert fra før */
+          if ($antallRader!=0)  /* Brukernavn er registrert fra før */
             {
-              print ("$klassekode er allerede i bruk");
+              print ("$brukernavn er allerede i bruk");
             }
           else
             {
-              $sqlSetning="INSERT INTO klasse VALUES('$klassekode','$klassenavn','$studiumkode');";
+              $sqlSetning="INSERT INTO student VALUES('$brukernavn','$fornavn','$etternavn','$klassekode');";
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
-              print ("Denne klassen er blitt registrert: $klassekode, $klassenavn, $studiumkode"); 
+              print ("Denne studenten er blitt registrert: $brukernavn, $fornavn $etternavn, $klassekode"); 
             }
         }
     }
