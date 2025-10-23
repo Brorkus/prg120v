@@ -38,7 +38,7 @@ Slett student <select name="slettstudent" id="slettstudent">
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
-              print ("Student $brukernavn, $fornavn $etternavn, $klassekode har blitt slettet <br />");
+              print ("Student med brukernavn: $brukernavn har blitt slettet <br />");
             }
         }
     }

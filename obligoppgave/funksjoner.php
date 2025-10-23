@@ -36,7 +36,7 @@ function listeboksBrukernavn()
       $etternavn=$rad["etternavn"];
       $klassekode=$rad["klassekode"];
 
-      print("<option value='$brukernavn, $fornavn, $etternavn, $klassekode'>$brukernavn, $fornavn $etternavn, $klassekode </option>");  /* ny verdi i listeboksen laget */
+      print("<option value='$brukernavn'>$brukernavn, $fornavn $etternavn, $klassekode </option>");  /* ny verdi i listeboksen laget */
     }
 }
 ?>
