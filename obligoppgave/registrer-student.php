@@ -1,11 +1,11 @@
 <?php
 ?>
-<h3>Registrer klasse </h3>
+<h3>Registrer student </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
-  Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
-  Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
-  Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
+  Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> Max 7 tegn <br/>
+  Fornavn <input type="text" id="fornavn" name="fornavn" required /> Max 50 tegn<br/>
+  Etternavn <input type="text" id="etternavn" name="etternavn" required /> Max 50 tegn<br/>
   Klassekode <select name="klassekode" id="klassekode">
     <option value="">velg klassekode</option>
     <?php include("funksjoner.php"); listeboksKlassekode(); ?> 
