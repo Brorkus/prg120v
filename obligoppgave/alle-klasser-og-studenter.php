@@ -1,6 +1,7 @@
 <?php
 include("dbconnect.php"); /* tilkobling til database */
 
+/*Start på klasse tabell*/
 $sqlSetning= "select * from klasse;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
@@ -24,7 +25,7 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
   }
   print("</table>"); /*tabell slutt */
 
-
+/*Start på student tabell*/
   $sqlSetning= "select * from student;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
@@ -46,7 +47,7 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
     $etternavn=$rad["etternavn"];
     $klassekode=$rad["klassekode"];
 
-    print("<tr> <td> $brukernavn </td> <td> $brukernavn </td> <td> $etternavn </td> <td> $klassekode </td> </tr>");
+    print("<tr> <td> $brukernavn </td> <td> $fornavn </td> <td> $etternavn </td> <td> $klassekode </td> </tr>");
   }
   print("</table>"); /*tabell slutt */
   ?>

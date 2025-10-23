@@ -48,7 +48,7 @@
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
-              print ("Denne studenten er blitt registrert: $brukernavn, $fornavn $etternavn, $klassekode"); 
+              print ("Denne studenten er blitt registrert: Brukernavn: $brukernavn, Navn: $fornavn $etternavn, Klasse: $klassekode"); 
             }
         }
     }
