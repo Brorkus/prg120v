@@ -1,15 +1,16 @@
 <script src="funksjoner.js"> </script>
 
-<h3>Slett klasse<h3>
+<h3>Slett klasse</h3>
 
 <form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema" onSubmit="return bekreft()">
-Slett klasse <select name="slettklasse" id="slettklasse">
-    <option value="">velg klasse</option>
-    <?php include("funksjoner.php"); listeboksKlasse(); ?> 
-  </select>  <br/>
-  <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" /> 
-  <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
+    Slett klasse <select name="slettklasse" id="slettklasse">
+        <option value="">velg klasse</option>
+        <?php include("funksjoner.php"); listeboksKlasse(); ?> 
+        </select>  <br/>
+    <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" /> 
+    <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
+
 <?php
  if (isset($_POST ["slettKlasseKnapp"]))
     {	

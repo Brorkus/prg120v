@@ -1,15 +1,16 @@
 <script src="funksjoner.js"> </script>
 
-<h3>Slett student<h3>
+<h3>Slett student</h3>
 
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
-Slett student <select name="slettstudent" id="slettstudent">
-    <option value="">velg student</option>
-    <?php include("funksjoner.php"); listeboksBrukernavn(); ?> 
-  </select>  <br/>
+    Slett student <select name="slettstudent" id="slettstudent">
+        <option value="">velg student</option>
+        <?php include("funksjoner.php"); listeboksBrukernavn(); ?> 
+        </select>  <br/>
   <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
+
 <?php
  if (isset($_POST ["slettStudentKnapp"]))
     {	
@@ -26,7 +27,7 @@ Slett student <select name="slettstudent" id="slettstudent">
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader==0)  /* poststedet er ikke registrert */
+          if ($antallRader==0)  /* Brukernavn er ikke i bruk */
             {
               print ("Brukernavn er ikke i bruk");
             }

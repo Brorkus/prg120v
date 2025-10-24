@@ -7,6 +7,7 @@
   <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
+
 <?php
  if (isset($_POST ["registrerKlasseKnapp"]))
     {
