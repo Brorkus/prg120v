@@ -1,5 +1,4 @@
-<?php
-?>
+
 <script src="funksjoner.js"> </script>
 
 <h3>Slett klasse<h3>
@@ -28,14 +27,12 @@ Slett klasse <select name="slettklasse" id="slettklasse">
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader!=0)  /* poststedet er ikke registrert */
+          if ($antallRader!=0)  /* Klasse har studenter */
             {
               print ("Kan ikke slette klasse med studenter");
             }
           else
             {
-           
-            	  
               $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode';";
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
