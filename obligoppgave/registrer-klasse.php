@@ -1,5 +1,3 @@
-<?php
-?>
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">

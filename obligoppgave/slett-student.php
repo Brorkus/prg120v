@@ -1,5 +1,3 @@
-<?php
-?>
 <script src="funksjoner.js"> </script>
 
 <h3>Slett student<h3>

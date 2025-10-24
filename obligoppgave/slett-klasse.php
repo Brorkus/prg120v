@@ -1,4 +1,3 @@
-
 <script src="funksjoner.js"> </script>
 
 <h3>Slett klasse<h3>
