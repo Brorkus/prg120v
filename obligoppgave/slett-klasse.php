@@ -34,10 +34,7 @@ Slett klasse <select name="slettklasse" id="slettklasse">
             }
           else
             {
-            include("dbconnect.php");  /* tilkobling til database */
-            $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekode';";
-            $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
-            $antallRader=mysqli_num_rows($sqlResultat); 
+           
             	  
               $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode';";
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
