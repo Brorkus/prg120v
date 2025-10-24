@@ -2,7 +2,7 @@
 include("dbconnect.php"); /* tilkobling til database */
 
 /*Start på klasse tabell*/
-$sqlSetning= "select * from klasse;";
+$sqlSetning= "select * from klasse ORDER BY klassekode;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
 
@@ -26,7 +26,7 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
   print("</table>"); /*tabell slutt */
 
 /*Start på student tabell*/
-  $sqlSetning= "select * from student;";
+  $sqlSetning= "select * from student ORDER BY klassekode;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
 
