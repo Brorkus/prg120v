@@ -28,7 +28,7 @@ Slett klasse <select name="slettklasse" id="slettklasse">
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader==0)  /* poststedet er ikke registrert */
+          if ($antallRader!=0)  /* poststedet er ikke registrert */
             {
               print ("Kan ikke slette klasse med studenter");
             }
