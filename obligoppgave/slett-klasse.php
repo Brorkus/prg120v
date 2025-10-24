@@ -2,21 +2,24 @@
 ?>
 <script src="funksjoner.js"> </script>
 
-<h3>Slett klasse</h3>
+<h3>Slett klasse<h3>
 
 <form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema" onSubmit="return bekreft()">
-  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
-  <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" /> 
+Slett klasse <select name="slettklasse" id="slettklasse">
+    <option value="">velg klasse</option>
+    <?php include("funksjoner.php"); listeboksKlasse(); ?> 
+  </select>  <br/>
+  <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" /> 
+  <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
-
 <?php
  if (isset($_POST ["slettKlasseKnapp"]))
     {	
-      $klassekode=$_POST ["klassekode"];
+      $klassekode=$_POST ["slettklasse"];
 	  
 	  if (!$klassekode)
         {
-          print ("Klassekode m&aring; fylles ut");
+          print ("Klasse m&aring; velges");
         }
       else
         {
@@ -35,7 +38,7 @@
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
-              print ("Klassen med klassekode $klassekode har blitt slettet <br />");
+              print ("Klasse med klassekode: $klassekode har blitt slettet <br />");
             }
         }
     }
