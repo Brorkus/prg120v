@@ -43,7 +43,7 @@ function listeboksBrukernavn()
 }
 
 /* Start funksjon listeboksKlasse */
-function listeboksKlassse()
+function listeboksKlasse()
 {
   include("dbconnect.php");  /* tilkobling til database */
       
