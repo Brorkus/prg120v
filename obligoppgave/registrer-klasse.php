@@ -17,11 +17,11 @@
 
       if (!$klassekode || !$klassenavn || !$studiumkode)
         {
-          print ("B&aring;de klassekode, klassenavn og studiumkode m&aring; fylles ut");
+          print ("<div class='melding feil'>Både klassekode, klassenavn og studiumkode må fylles ut</div>");
         }
       else if (strlen($klassekode)>5 || strlen($klassenavn)>50 || strlen($studiumkode)>50)
         {
-          print ("En eller flere felt er for lange");
+          echo <div class='melding feil'>En eller flere felt er for lange</div>;
         }
       else
         {
@@ -33,7 +33,7 @@
 
           if ($antallRader!=0)  /* Klasse er registrert fra før */
             {
-              print ("$klassekode er allerede i bruk");
+              print (<div class='melding feil'>$klassekode er allerede i bruk</div>);
             }
           else
             {
