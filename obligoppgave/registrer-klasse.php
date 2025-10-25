@@ -9,6 +9,9 @@
 </form>
 
 <?php
+$lovligKlassekode=true;
+$lovligKlassenavn=true;
+$lovligStudiumkode=true;
  if (isset($_POST ["registrerKlasseKnapp"]))
     {
       $klassekode=$_POST ["klassekode"];
@@ -18,6 +21,10 @@
       if (!$klassekode || !$klassenavn || !$studiumkode)
         {
           print ("B&aring;de klassekode, klassenavn og studiumkode m&aring; fylles ut");
+        }
+      else if (strlen($klassekode)>=5 || strlen($klassenavn)>=50 || strlen($studiumkode)>=50);
+        {
+          print ("Ikke riktig fylt ut");
         }
       else
         {
