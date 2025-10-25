@@ -19,9 +19,9 @@
         {
           print ("B&aring;de klassekode, klassenavn og studiumkode m&aring; fylles ut");
         }
-      else if (strlen($klassekode)>=5 || strlen($klassenavn)>=50 || strlen($studiumkode)>=50)
+      else if (strlen($klassekode)>5 || strlen($klassenavn)>50 || strlen($studiumkode)>50)
         {
-          print ("Ikke riktig fylt ut");
+          print ("En eller flere felt er for lange");
         }
       else
         {
