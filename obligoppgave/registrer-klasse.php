@@ -1,3 +1,22 @@
+<style>
+  .melding {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+  }
+  .feil {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  .suksess {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+</style>
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
