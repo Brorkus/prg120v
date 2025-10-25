@@ -24,6 +24,10 @@
         {
           print ("B&aring;de brukernavn, forenavn, etternavn og klassekode m&aring; fylles ut");
         }
+         else if (strlen($brukernavn)>7 || strlen($fornavn)>50 || strlen($etternavn)>50 || strlen($klassekode)>5)
+        {
+          print ("En eller flere felt er for lange");
+        }
       else
         {
           include("dbconnect.php");  /* tilkobling til database */
