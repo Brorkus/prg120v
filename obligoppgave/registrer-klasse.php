@@ -1,9 +1,9 @@
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
-  Klassekode <input type="text" id="klassekode" name="klassekode" required /> Maks 5 tegn <br/>
-  Klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> Maks 50 tegn <br/>
-  Studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> Maks 50 tegn <br/>
+  Klassekode <input type="text" id="klassekode" name="klassekode" maxlength="5" required /> Maks 5 tegn <br/>
+  Klassenavn <input type="text" id="klassenavn" name="klassenavn" maxlength="50" required /> Maks 50 tegn <br/>
+  Studiumkode <input type="text" id="studiumkode" name="studiumkode" maxlength="50" required /> Maks 50 tegn <br/>
   <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
