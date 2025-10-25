@@ -17,11 +17,11 @@
 
       if (!$klassekode || !$klassenavn || !$studiumkode)
         {
-          print ("<div class='melding feil'>Både klassekode, klassenavn og studiumkode må fylles ut</div>");
+          print ("B&aring;de klassekode, klassenavn og studiumkode m&aring; fylles ut");
         }
       else if (strlen($klassekode)>5 || strlen($klassenavn)>50 || strlen($studiumkode)>50)
         {
-          echo (<div class='melding feil'>En eller flere felt er for lange</div>);
+          print ("En eller flere felt er for lange");
         }
       else
         {
@@ -33,7 +33,7 @@
 
           if ($antallRader!=0)  /* Klasse er registrert fra før */
             {
-              print (<div class='melding feil'>$klassekode er allerede i bruk</div>);
+              print ("$klassekode er allerede i bruk");
             }
           else
             {
@@ -41,7 +41,7 @@
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
-              print ("Denne klassen er blitt registrert: $klassekode, $klassenavn, $studiumkode"); 
+              echo "<div class='melding suksess'>Denne klassen er blitt registrert: $klassekode, $klassenavn, $studiumkode</div>";
             }
         }
     }
