@@ -56,7 +56,7 @@
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
-              echo "<div class='melding feil'>Student med brukernavn: $brukernavn har blitt slettet</div>";
+              echo "<div class='melding suksess'>Student med brukernavn: $brukernavn har blitt slettet</div>";
             }
         }
     }

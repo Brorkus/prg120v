@@ -40,8 +40,20 @@
           echo "<div class='melding feil'>Klasse m&aring; velges</div>";
         }
       else
-        {
+      {
           include("dbconnect.php");  /* tilkobling til database */
+          $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekode';";
+          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
+          $antallRader=mysqli_num_rows($sqlResultat); 
+
+          if ($antallRader==0)  /* Klassekode er ikke i bruk */
+            {
+              echo "<div class='melding feil'>Klassekode er ikke i bruk</div>";
+            }
+      
+          else
+        {
+          
           $sqlSetning="SELECT * FROM student WHERE klassekode='$klassekode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
@@ -60,4 +72,5 @@
             }
         }
     }
+}
 ?>
