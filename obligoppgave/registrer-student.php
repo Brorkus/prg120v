@@ -49,8 +49,17 @@
         }
       else
         {
-          include("dbconnect.php");  /* tilkobling til database */
+            include("dbconnect.php");  /* tilkobling til database */
+          $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekode';";
+          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
+          $antallRader=mysqli_num_rows($sqlResultat); 
 
+          if ($antallRader==0)  /* Klassekode er ikke i bruk */
+            {
+              echo "<div class='melding feil'>Klassekode er ikke i bruk</div>";
+            }
+            else
+            {
           $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
           $antallRader=mysqli_num_rows($sqlResultat); 
@@ -66,6 +75,7 @@
                 /* SQL-setning sendt til database */
 
               echo "<div class='melding suksess'>Denne studenten er blitt registrert: Brukernavn: $brukernavn, Navn: $fornavn $etternavn, Klasse: $klassekode</div>";
+            }
             }
         }
     }
