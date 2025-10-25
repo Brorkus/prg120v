@@ -21,7 +21,7 @@
         }
       else if (strlen($klassekode)>5 || strlen($klassenavn)>50 || strlen($studiumkode)>50)
         {
-          echo <div class='melding feil'>En eller flere felt er for lange</div>;
+          echo (<div class='melding feil'>En eller flere felt er for lange</div>);
         }
       else
         {
