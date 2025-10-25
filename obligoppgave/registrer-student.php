@@ -1,3 +1,22 @@
+<style>
+  .melding {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+  }
+  .feil {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  .suksess {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+</style>
 <h3>Registrer student </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
@@ -22,11 +41,11 @@
 
       if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode)
         {
-          print ("B&aring;de brukernavn, forenavn, etternavn og klassekode m&aring; fylles ut");
+          echo "<div class='melding feil'>B&aring;de brukernavn, forenavn, etternavn og klassekode m&aring; fylles ut</div>";
         }
          else if (strlen($brukernavn)>7 || strlen($fornavn)>50 || strlen($etternavn)>50 || strlen($klassekode)>5)
         {
-          print ("En eller flere felt er for lange");
+          echo "<div class='melding feil'>En eller flere felt er for lange</div>";
         }
       else
         {
@@ -38,7 +57,7 @@
 
           if ($antallRader!=0)  /* Brukernavn er registrert fra før */
             {
-              print ("$brukernavn er allerede i bruk");
+              echo "<div class='melding feil'>$brukernavn er allerede i bruk</div>";
             }
           else
             {
@@ -46,7 +65,7 @@
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
-              print ("Denne studenten er blitt registrert: Brukernavn: $brukernavn, Navn: $fornavn $etternavn, Klasse: $klassekode"); 
+              echo "<div class='melding suksess'>Denne studenten er blitt registrert: Brukernavn: $brukernavn, Navn: $fornavn $etternavn, Klasse: $klassekode</div>";
             }
         }
     }

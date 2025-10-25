@@ -1,3 +1,22 @@
+<style>
+  .melding {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+  }
+  .feil {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  .suksess {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+</style>
 <script src="funksjoner.js"> </script>
 
 <h3>Slett student</h3>
@@ -18,7 +37,7 @@
 	  
 	  if (!$brukernavn)
         {
-          print ("Student m&aring; velges");
+          echo "<div class='melding feil'>Student m&aring; velges</div>";
         }
       else
         {
@@ -29,7 +48,7 @@
 
           if ($antallRader==0)  /* Brukernavn er ikke i bruk */
             {
-              print ("Brukernavn er ikke i bruk");
+              echo "<div class='melding feil'>Brukernavn er ikke i bruk</div>";
             }
           else
             {	  
@@ -37,7 +56,7 @@
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
-              print ("Student med brukernavn: $brukernavn har blitt slettet <br />");
+              echo "<div class='melding feil'>Student med brukernavn: $brukernavn har blitt slettet</div>";
             }
         }
     }

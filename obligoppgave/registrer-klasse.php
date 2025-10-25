@@ -1,5 +1,4 @@
 <style>
-  background: rgba(72, 71, 70);
   .melding {
     padding: 10px;
     margin-top: 10px;
