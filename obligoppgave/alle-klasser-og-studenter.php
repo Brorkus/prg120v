@@ -1,3 +1,4 @@
+<header>Alle klasser og studenter </header>
 <?php
 include("dbconnect.php"); /* tilkobling til database */
 
