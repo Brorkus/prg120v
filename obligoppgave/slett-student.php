@@ -19,6 +19,9 @@
 </style>
 <script src="funksjoner.js"> </script>
 
+<head>
+  <title>Slett student</title>
+</head>
 <h3>Slett student</h3>
 
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">

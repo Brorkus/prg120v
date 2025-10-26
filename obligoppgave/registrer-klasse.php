@@ -17,6 +17,9 @@
     border: 1px solid #c3e6cb;
   }
 </style>
+<head>
+  <title>Registrer klasse</title>
+</head>
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerKlasse" name="registrerKlasse">
