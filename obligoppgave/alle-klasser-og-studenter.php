@@ -1,4 +1,6 @@
-<header>Alle klasser og studenter </header>
+<head>
+  <title>Alle klasser og studenter</title>
+</head>
 <?php
 include("dbconnect.php"); /* tilkobling til database */
 
