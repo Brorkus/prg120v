@@ -39,7 +39,7 @@
         {
           echo "<div class='melding feil'>Student m&aring; velges</div>";
         }
-      else
+    else
         {
           include("dbconnect.php");  /* tilkobling til database */
           $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";

@@ -8,7 +8,7 @@ $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra da
 
 $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/ 
 
- print ("<h3>Registrerte klasser</h3>");
+  print ("<h3>Registrerte klasser</h3>");
   print ("<table border=1>");   /*tabell start */
   print ("<tr><th align=left>Klassekode</th> 
           <th align=left>Klassenavn</th>
@@ -23,16 +23,16 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
 
     print("<tr> <td> $klassekode </td> <td> $klassenavn </td> <td> $studiumkode </td> </tr>");
   }
-  print("</table>"); /*tabell slutt */
+print("</table>"); /*tabell slutt */
 
 /*Start på student tabell*/
-  $sqlSetning= "select * from student ORDER BY klassekode;";
+$sqlSetning= "select * from student ORDER BY klassekode;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
 
 $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/ 
 
- print ("<h3>Registrerte studenter</h3>");
+  print ("<h3>Registrerte studenter</h3>");
   print ("<table border=1>");   /*tabell start */
   print ("<tr><th align=left>Brukernavn</th> 
           <th align=left>Fornavn</th>
@@ -49,5 +49,5 @@ $antallRader=mysqli_num_rows($sqlResultat); /*antall rader beregnet*/
 
     print("<tr> <td> $brukernavn </td> <td> $fornavn </td> <td> $etternavn </td> <td> $klassekode </td> </tr>");
   }
-  print("</table>"); /*tabell slutt */
-  ?>
+print("</table>"); /*tabell slutt */
+?>

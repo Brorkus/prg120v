@@ -41,9 +41,9 @@
 
       if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode)
         {
-          echo "<div class='melding feil'>B&aring;de brukernavn, forenavn, etternavn og klassekode m&aring; fylles ut</div>";
+          echo "<div class='melding feil'>B&aring;de brukernavn, fornavn, etternavn og klassekode m&aring; fylles ut</div>";
         }
-         else if (strlen($brukernavn)>7 || strlen($fornavn)>50 || strlen($etternavn)>50 || strlen($klassekode)>5)
+      else if (strlen($brukernavn)>7 || strlen($fornavn)>50 || strlen($etternavn)>50 || strlen($klassekode)>5)
         {
           echo "<div class='melding feil'>En eller flere felt er for lange</div>";
         }
@@ -58,24 +58,24 @@
             {
               echo "<div class='melding feil'>Klassekode er ikke i bruk</div>";
             }
-            else
-            {
-          $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";
-          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
-          $antallRader=mysqli_num_rows($sqlResultat); 
-
-          if ($antallRader!=0)  /* Brukernavn er registrert fra før */
-            {
-              echo "<div class='melding feil'>$brukernavn er allerede i bruk</div>";
-            }
           else
             {
+            $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";
+            $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
+            $antallRader=mysqli_num_rows($sqlResultat); 
+
+            if ($antallRader!=0)  /* Brukernavn er registrert fra før */
+              {
+              echo "<div class='melding feil'>$brukernavn er allerede i bruk</div>";
+              }
+            else
+              {
               $sqlSetning="INSERT INTO student VALUES('$brukernavn','$fornavn','$etternavn','$klassekode');";
               mysqli_query($db,$sqlSetning) or die ("Kunne ikke registrere data i database");
                 /* SQL-setning sendt til database */
 
               echo "<div class='melding suksess'>Denne studenten er blitt registrert: Brukernavn: $brukernavn, Navn: $fornavn $etternavn, Klasse: $klassekode</div>";
-            }
+              }
             }
         }
     }

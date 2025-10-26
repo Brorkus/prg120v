@@ -39,8 +39,8 @@
         {
           echo "<div class='melding feil'>Klasse m&aring; velges</div>";
         }
-      else
-      {
+    else
+        {
           include("dbconnect.php");  /* tilkobling til database */
           $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klassekode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
@@ -52,25 +52,25 @@
             }
       
           else
-        {
+            {
           
-          $sqlSetning="SELECT * FROM student WHERE klassekode='$klassekode';";
-          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
-          $antallRader=mysqli_num_rows($sqlResultat); 
+            $sqlSetning="SELECT * FROM student WHERE klassekode='$klassekode';";
+            $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Kunne ikke hente data fra database");
+            $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader!=0)  /* Klasse har studenter */
-            {
-              echo "<div class='melding feil'>Kan ikke slette klasse med studenter</div>";
-            }
-          else
-            {
+            if ($antallRader!=0)  /* Klasse har studenter */
+              {
+                echo "<div class='melding feil'>Kan ikke slette klasse med studenter</div>";
+              }
+            else
+              {
               $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode';";
               mysqli_query($db,$sqlSetning) or die ("kunne ikke slette data i databasen");
                 /* SQL-setning sendt til database */
 		
               echo "<div class='melding suksess'>Klasse med klassekode: $klassekode har blitt slettet</div>";
+              }
             }
         }
     }
-}
 ?>
